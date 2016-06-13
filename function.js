@@ -12,3 +12,14 @@ var calcularPreco = function(produto, imposto){
 var preco = calcularPreco(produto, calcularImposto);
 
 console.log(preco);
+
+
+// Retornando um função
+
+var retornandoFuncao = function(){
+	return function(){
+		return "Olá";
+	};
+};
+
+console.log(retornandoFuncao()());
