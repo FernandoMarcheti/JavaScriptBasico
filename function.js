@@ -47,3 +47,15 @@ var pessoa2 = {
 };
 
 console.log(pessoa2.getIdade());
+
+
+// Invocando uma função com call e apply
+
+var pessoa3 = {
+	nome: "Pessoa 3",
+	idade: 40
+};
+
+console.log(getIdade.call(pessoa3));
+
+
