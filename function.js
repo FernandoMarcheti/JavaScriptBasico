@@ -59,3 +59,26 @@ var pessoa3 = {
 console.log(getIdade.call(pessoa3));
 
 
+// Invocando uma função por meio do operador new
+
+// Funções Fábrica
+var criarPessoa = function(nome, idade){
+	return {
+		nome: nome,
+		idade: idade
+	};
+};
+
+console.log(criarPessoa("Fernando", 28));
+
+// Funções Construtoras
+var PessoaConstrutora = function(nome, idade){
+	this.nome = nome,
+	this.idade = idade
+};
+
+console.log(new PessoaConstrutora("Marcheti", 28));
+
+var fernando = {};
+PessoaConstrutora.call(fernando, "Fernando", 28);
+console.log(fernando);
