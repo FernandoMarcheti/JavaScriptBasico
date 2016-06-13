@@ -23,3 +23,27 @@ var retornandoFuncao = function(){
 };
 
 console.log(retornandoFuncao()());
+
+// Utilizando um função como método, declarada dentro do objeto
+var pessoa = {
+	nome: "Fernando",
+	idade: 28,
+	getIdade: function(){ 
+		return this.idade; 
+	}
+};
+
+console.log(pessoa.getIdade());
+
+// Exemplo 2
+var getIdade = function(){
+	return this.idade;
+};
+
+var pessoa2 = {
+	nome: "Zeca",
+	idade: 20,
+	getIdade: getIdade
+};
+
+console.log(pessoa2.getIdade());
